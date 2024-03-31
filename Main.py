@@ -4,8 +4,6 @@ from SelectionSorting import SelectionSorting
 from InsertionSorting import InsertionSorting
 from MergeSorting import MergeSorting
 
-
-
 array = []
 for _ in range(10):
     if random.choice([True, False]): 

@@ -13,25 +13,28 @@ class MergeSorting:
             right = MergeSorting(right).sort()
 
             # Merging the arrays
-            result = []
-            i = j = 0
+            i = j = k = 0
             while i < len(left) and j < len(right):
                 if left[i] <= right[j]:
-                    result.append(left[i])
+                    self.array[k] = left[i]
                     i += 1
+                    k += 1
                 else:
-                    result.append(right[j])
+                    self.array[k] = right[j]
                     j += 1
+                    k += 1
 
             # Appending remaining elements
             while i < len(left):
-                result.append(left[i])
+                self.array[k] = left[i]
                 i += 1
+                k += 1
 
             while j < len(right):
-                result.append(right[j])
+                self.array[k] = right[j]
                 j += 1
+                k += 1
 
-            return result
+            return self.array
         else:
             return self.array
