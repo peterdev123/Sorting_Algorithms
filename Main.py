@@ -5,6 +5,7 @@ from InsertionSorting import InsertionSorting
 from MergeSorting import MergeSorting
 from ShellSorting import ShellSorting
 from QuickSorting import QuickSorting
+from RadixSorting import RadixSorting
 
 array = []
 for _ in range(10):
@@ -20,8 +21,9 @@ print("Unsorted array: " + str(array))
 # myClass = InsertionSorting(array)
 # myClass = MergeSorting(array)
 # myClass = ShellSorting(array)
-myClass = QuickSorting(array)
-# sorted = myClass.sort()
-sortedArray = myClass.sort(0, len(array) - 1)
+# myClass = QuickSorting(array)
+myClass = RadixSorting(array)
+sortedArray = myClass.sort()
+# sortedArray = myClass.sort(0, len(array) - 1)
 
 print("Sorted array: " + str(sortedArray))
